@@ -12,7 +12,16 @@
 	    android:id="@+id/button_back"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:onClick="sendToMainActivity"
 	    android:text="@string/button_back" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_back"
+        android:layout_below="@+id/button_back"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/SecondString" />
 
 </RelativeLayout>

@@ -7,5 +7,7 @@
     <string name="button_send">Switch to 2nd Activity</string>
     <string name="title_activity_second">Second Activity</string>
     <string name="button_back">Go back to main activity</string>
+    <string name="MainString">This is a string</string>
+    <string name="SecondString">This is another string</string>
 
 </resources>

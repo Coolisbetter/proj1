@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class SecondActivity extends Activity 
 {
+	private Button buttonBack;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
@@ -15,11 +18,22 @@ public class SecondActivity extends Activity
 		setContentView(R.layout.activity_second);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		init();
 	}
-
-	public void sendToMainActivity(View view)
+	
+	private void init()
 	{
-		NavUtils.navigateUpFromSameTask(this);
+		buttonBack = (Button) findViewById(R.id.button_back);
+		buttonBack.setOnClickListener(new buttonBackOnClickListener());
+	}
+	
+	private class buttonBackOnClickListener implements OnClickListener
+	{
+		@Override
+		public void onClick(View arg0) 
+		{
+			NavUtils.navigateUpFromSameTask(SecondActivity.this);
+		}
 	}
 
 	/**
